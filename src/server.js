@@ -1,5 +1,8 @@
 const { server } = require('fastexpress');
+const cors = require('cors');
 const routes = require('./routes');
+
+server.use(cors({ origin: '*' }));
 
 server.use(routes);
 
